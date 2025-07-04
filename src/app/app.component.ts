@@ -18,5 +18,9 @@ export class AppComponent {
     console.log("clicked");
     this.slider.nativeElement.scrollLeft += 150;
   }
+  scrollLeft(): void {
+    console.log("clicked");
+    this.slider.nativeElement.scrollLeft -= 150;
+  }
 
 }

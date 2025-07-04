@@ -1,18 +1,20 @@
+
 .name {
-    text-align: center;
+    margin-top: 70px;
+    text-align: left;
   }
 
 
   .slider-wrapper { 
-    height: 100px; 
+    height: 400px; 
     width: 100vw;
-    
+    position: relative;
   }
+
  
   .slider-container {
-
-    max-height: 120px;
-    border: 1px solid #ddd;
+    margin-top: 10px;
+    
     position:relative;
     overflow: hidden;
     transform: transform 0.5s ease-in-out;
@@ -25,16 +27,16 @@
   }
 
   .slider-container img{
-    min-width: 110px;
-   width: 110px;
-   margin-right: 2px;
-   height: 110px;
+    min-width: 310px;
+   margin-right: 4px;
+   height: 410px;
    line-height: 110px;
   }
 
-  .slider-wrapper button{
+  
+
+  .scroll-right, .scroll-left {
     position: absolute;
-    right: 10px;
     top: 50%;
     transform: translateY(-50%);
     height: 40px;
@@ -44,7 +46,15 @@
     background: white;
     border: 1px solid #ccc;
     cursor: pointer;
-    margin-top: -290px;
+    z-index: 10;
+  }
+
+  .scroll-right {
+    right: 10px;
+  }
+  
+  .scroll-left {
+    left: 10px;
   }
 
 
