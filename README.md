@@ -1,59 +1,35 @@
 # ErrProovitoo
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.4.
+See projekt on loodud Angular raamistikus eesmärgiga demonstreerida horisontaalse slider-komponendi funktsionaalsust, kasutades ERR Jupiteri API andmeid.
 
-## Development server
+# Tehtud funktsionaalsus
+* Loogika andmete toomiseks ERR API kaudu.
 
-To start a local development server, run:
+* Dünaamiline sektsioonide kuvamine (Enim vaadatud, Sport, jne), igaühel eraldi horisontaalne piltide slider.
 
-```bash
-ng serve
-```
+* Iga sektsiooni sees olevad pildid tulevad andmete verticalPhotos[0].photoTypes['60'].url põhjal.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+* Lisatud vasakule ja paremale kerimisnupud igasse sektsiooni:
 
-## Code scaffolding
+* Nupud ilmuvad ainult siis, kui pilte on rohkem kui mahub nähtavale alale.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+* Nupud on vaikimisi peidetud ja muutuvad nähtavaks hiirega peale liikudes (hover-il).
 
-```bash
-ng generate component component-name
-```
+* Skrollimine töötab sujuvalt (scrollBy koos behavior: 'smooth').
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+* Lisatud visuaalne kujundus (slider-img, scroll-left, scroll-right jne).
 
-```bash
-ng generate --help
-```
+# Kuidas käivitada
+* Paigalda sõltuvused: npm install
 
-## Building
+* Käivita arendusserver: ng serve
 
-To build the project run:
+* Ava brauseris: http://localhost:4200/
 
-```bash
-ng build
-```
+# Muu info
+* Kasutasin @Input() väärtusena iga sektsiooni andmeid.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+* Slider on realiseeritud kui eraldi komponent (SliderSectionComponent), mida kasutatakse mitmel korral parent-komponendis.
 
-## Running unit tests
+* Projekt kasutab standalone components Angular 16+ stiilis.
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
