@@ -1,8 +1,6 @@
 import { Component, ViewChild, ElementRef, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common'; 
-import { BrowserModule } from '@angular/platform-browser';
 import { ApiService } from './api.service';
-import { response } from 'express';
 import { SliderSectionComponent } from './slider-section/slider-section';
 
 @Component({
