@@ -1,0 +1,28 @@
+<div class="slider-wrapper" (mouseenter)="hovering = true" (mouseleave)="hovering = false">
+    <h1 class="name">{{ section.header || 'Untitled' }}</h1>
+  
+    <div class="slider-container" #slider>
+      <img
+        *ngFor="let item of section.data"
+        [src]="item.verticalPhotos?.[0]?.photoTypes?.['60']?.url"
+        [alt]="item.heading"
+        class="slider-img"
+      />
+    </div>
+  
+  
+    
+    <button
+    class="scroll-left"
+    (click)="scrollLeft()"
+    [class.visible]="hovering && shouldShowScroll">
+    ‹
+  </button>
+  <button
+    class="scroll-right"
+    (click)="scrollRight()"
+    [class.visible]="hovering && shouldShowScroll">
+    ›
+  </button>
+</div>
+  
